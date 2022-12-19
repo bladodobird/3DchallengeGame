@@ -355,6 +355,7 @@
 "Assets/Challenge 2/Scripts/MoveLeft.cs"
 "Assets/Challenge 2/Scripts/PlayerControllerB.cs"
 "Assets/Challenge 2/Scripts/PlayerControllerC.cs"
+"Assets/Challenge 2/Scripts/RepeatBackground.cs"
 "Assets/Challenge 2/Scripts/SpawnManagerC.cs"
 "Assets/Challenge 2/Scripts/SpawnManagerX.cs"
 -langversion:9.0
