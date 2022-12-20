@@ -295,8 +295,9 @@ MonoBehaviour:
   jumpForce: 10
   gravityMod: 2
   isOnGround: 1
-  twiceJump: 1
+  twiceJump: 0
   gameOver: 0
+  playerAnim: {fileID: 0}
 --- !u!65 &208422087
 BoxCollider:
   m_ObjectHideFlags: 0

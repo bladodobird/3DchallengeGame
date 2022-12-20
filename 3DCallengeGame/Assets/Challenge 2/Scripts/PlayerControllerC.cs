@@ -13,11 +13,15 @@ public class PlayerControllerC : MonoBehaviour
 
     public bool gameOver = false;
 
+    public Animator playerAnim;
+
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
         //playerRB.AddForce(Vector3.up * 100); //針對此鋼體施力道.方向 * 力量
         Physics.gravity = Physics.gravity * gravityMod;
+
+        playerAnim = GetComponent<Animator>();
     }
 
     void Update()
@@ -27,7 +31,9 @@ public class PlayerControllerC : MonoBehaviour
             playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             //isOnGround = false;//離地 空白建跳躍就會失效
             twiceJump++; // +1的意思
-            print("跳的次數: " + twiceJump);
+            //print("跳的次數: " + twiceJump);
+            playerAnim.SetTrigger("Jump_trig");
+            
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -36,6 +42,7 @@ public class PlayerControllerC : MonoBehaviour
         {
             isOnGround = true;
             twiceJump = 0;
+            //playerAnim.SetFloat("Speed_f", 1);
         }
         else if(collision.gameObject.CompareTag("Obstacle"))
         {
