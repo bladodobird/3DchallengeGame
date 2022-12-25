@@ -13,7 +13,7 @@ public class DestroyC : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.sqrMagnitude < -8)
+        if (transform.position.x < -8)
         {
             Destroy(gameObject);
         }
